@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+            <LinearLayout
+                android:id="@+id/l_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/rank"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/header"
+                    android:text=" #1 "
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/coin_image"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/coin_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="7dp"
+                    android:fontFamily="@font/alike_angular"
+                    android:gravity="center_vertical"
+                    android:text="BITCOIN"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/price_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/alike_angular"
+                android:text=" $34,000 "
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/l_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.731"
+                app:layout_constraintStart_toEndOf="@+id/l_layout" />
+
+            <ImageView
+                android:id="@+id/price_arrow_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/percent_down_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/price_change_24h_percent"
+                app:layout_constraintStart_toStartOf="@+id/price_num"
+                app:layout_constraintTop_toTopOf="@+id/price_change_24h_percent" />
+
+            <TextView
+                android:id="@+id/price_change_24h_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/header"
+                android:fontFamily="@font/alike_angular"
+                android:text=" 2.435 % "
+
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toEndOf="@+id/price_arrow_image"
+                app:layout_constraintTop_toBottomOf="@+id/price_num" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/LineChart"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@id/l_layout"
+                android:layout_marginTop="155dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+            </com.github.mikephil.charting.charts.LineChart>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

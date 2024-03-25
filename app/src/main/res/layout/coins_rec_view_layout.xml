@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout"
+        >
+
+
+    <LinearLayout
+        android:id="@+id/parentLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="4dp">
+
+
+        <ImageView
+            android:id="@+id/coinPic"
+            android:layout_width="36dp"
+            android:layout_height="30dp"
+            android:paddingRight="4dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/coinName"
+            android:layout_width="103dp"
+
+            android:layout_height="match_parent"
+            android:fontFamily="@font/adamina"
+            android:gravity="center_vertical"
+            android:text="Ethereum"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/adamina"
+            android:gravity="center_vertical"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/marketcap"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/adamina"
+            android:gravity="center_vertical"
+            android:text="28335369896"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/pricechangepercent24"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/adamina"
+            android:gravity="center_vertical"
+            android:text="-2.45"
+            android:textSize="10sp" />
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#D5D0D0"
+        android:layout_below="@+id/parentLinearLayout"/>
+
+    </RelativeLayout>
+
+
+
